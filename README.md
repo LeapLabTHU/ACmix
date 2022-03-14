@@ -30,7 +30,7 @@ same computation overhead (1×1 convolutions), and combining with the remaining 
 
 ## Get Started
 
-Please go to the folder [Swin Transformer](https://github.com/LeapLabTHU/ACmix/tree/main/Swin-Transformer) for specific docs.
+Please go to the folder [Swin-Transformer](https://github.com/LeapLabTHU/ACmix/tree/main/Swin-Transformer) for specific docs.
 
 ## Contact
 
