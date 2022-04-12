@@ -3,6 +3,12 @@ This repo contains the official **PyTorch** code and pre-trained models for ACmi
 
 + [On the Integration of Self-Attention and Convolution](https://arxiv.org/pdf/2111.14556v1.pdf)
 
+## Update
+
++ **2022.4.13  Update ResNet training code.** 
+
+  **Notice:** Self-attention in ResNet is adopted following [Stand-Alone Self-Attention in Vision Models, NeurIPS 2019](https://proceedings.neurips.cc/paper/2019/file/3416a75f4cea9109507cacd8e2f2aefc-Paper.pdf). The sliding window pattern is extremely inefficient unless with carefully designed CUDA implementations. Therefore, **it is highly recommended** to use ACmix on SAN (with more efficient self-attention pattern) or Transformer-based models instead of vanilla ResNet.
+
 ## Introduction
 
 ![main](figure/main.png)
@@ -20,6 +26,9 @@ same computation overhead (1×1 convolutions), and combining with the remaining 
 
 | Backbone Models | Params | FLOPs | Top-1 Acc   | Links                                                        |
 | --------------- | ------ | ----- | ----------- | ------------------------------------------------------------ |
+| ResNet-26       | 10.6M  | 2.3G  | 76.1 (+2.5) | In process                                                   |
+| ResNet-38       | 14.6M  | 2.9G  | 77.4 (+1.4) | In process                                                   |
+| ResNet-50       | 18.6M  | 3.6G  | 77.8 (+0.9) | In process                                                   |
 | SAN-10          | 12.1M  | 1.9G  | 77.6 (+0.5) | In process                                                   |
 | SAN-15          | 16.6M  | 2.7G  | 78.4 (+0.4) | In process                                                   |
 | SAN-19          | 21.2M  | 3.4G  | 78.7 (+0.5) | In process                                                   |
@@ -30,7 +39,7 @@ same computation overhead (1×1 convolutions), and combining with the remaining 
 
 ## Get Started
 
-Please go to the folder [Swin-Transformer](https://github.com/LeapLabTHU/ACmix/tree/main/Swin-Transformer) for specific docs.
+Please go to the folder [ResNet](https://github.com/LeapLabTHU/ACmix/tree/main/ResNet), [Swin-Transformer](https://github.com/LeapLabTHU/ACmix/tree/main/Swin-Transformer) for specific docs.
 
 ## Contact
 
