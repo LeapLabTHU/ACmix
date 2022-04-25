@@ -98,7 +98,7 @@ class ACmix(nn.Module):
 
 ## conv
         f_all = self.fc(torch.cat([q.view(b, self.head, self.head_dim, h*w), k.view(b, self.head, self.head_dim, h*w), v.view(b, self.head, self.head_dim, h*w)], 1))
-        f_conv = f_all.permute(0, 2, 1, 3).reshape(x.shape[0], -1, x.shape[-1], x.shape[-1])
+        f_conv = f_all.permute(0, 2, 1, 3).reshape(x.shape[0], -1, x.shape[-2], x.shape[-1])
         
         out_conv = self.dep_conv(f_conv)
 
